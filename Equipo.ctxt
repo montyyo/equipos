@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=nombre\ jugadores
+comment0.target=Equipo(java.lang.String,\ int)
+comment0.text=\r\n\ Constructor\ de\ equipos\r\n
+comment1.params=
+comment1.target=java.lang.String\ getNombre()
+comment2.params=
+comment2.target=void\ listaTitulares()
+comment3.params=
+comment3.target=void\ listaSuplentes()
+comment4.params=
+comment4.target=float\ mediaValoracion()
+numComments=5

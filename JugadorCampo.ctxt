@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=nombre
+comment0.target=JugadorCampo(java.lang.String)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Portero\r\n
+comment1.params=
+comment1.target=int\ getPase()
+comment1.text=\r\n\ devuelve\ la\ pase\r\n\ @return\ int\ pase\r\n
+comment2.params=
+comment2.target=int\ getRegate()
+comment2.text=\r\n\ devuelve\ la\ regate\r\n\ @return\ int\ regate\r\n
+comment3.params=
+comment3.target=int\ getRemate()
+comment3.text=\r\n\ devuelve\ la\ remate\r\n\ @return\ int\ remate\r\n
+comment4.params=
+comment4.target=int\ valoracion()
+comment4.text=\r\n\ devuelve\ la\ valoracion\ de\ cada\ jugador\r\n\ @return\ int\ valoracion\ del\ jugador\r\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ datos\ del\ portero\r\n\ @return\ string\ datos\ del\ portero\r\n
+numComments=6
