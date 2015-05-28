@@ -53,7 +53,10 @@ public class Equipo
         
         //eleccion del capitan
         int capitan = rn.nextInt(10)+1;
-        componentes.set(capitan,new Capitan(nombres[rn.nextInt(33)]));
+        int dorsalc=componentes.get(capitan).getDorsal();
+        String nomb=componentes.get(capitan).getNombre();
+        componentes.set(capitan,new Capitan(nomb));
+        componentes.get(capitan).setDorsal(dorsalc);
     }
 
     public String getNombre()

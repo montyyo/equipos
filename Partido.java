@@ -32,7 +32,8 @@ public class Partido
          System.out.println("Reservas:");
         equipo1.listaSuplentes();
          
-         
+          System.out.println("");
+          System.out.println("");
          System.out.println( equipo2.getNombre());
         System.out.println("Titulares:");
          equipo2.listaTitulares();

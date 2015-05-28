@@ -96,7 +96,7 @@ public abstract class Jugador
     public String toString()
     {
         return "Dorsal " + dorsal+".  " + nombre +
-               " ("+ edad +" anos)      "+ "Forma: "+formaFisica;
+               " ("+ edad +" anos)     "+ "Forma: "+formaFisica;
     }
     
 
