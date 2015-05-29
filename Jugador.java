@@ -95,8 +95,9 @@ public abstract class Jugador
      */
     public String toString()
     {
-        return "Dorsal " + dorsal+".  " + nombre +
-               " ("+ edad +" anos)     "+ "Forma: "+formaFisica;
+        
+        return "Dorsal " + dorsal+ "  " + String.format("%14s",nombre) +
+               " ("+ edad +" anos)     "+ "Forma:"+ "\t" +formaFisica+ "\t";
     }
     
 

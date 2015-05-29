@@ -59,7 +59,7 @@ public class Portero extends Jugador
      */
     public String toString()
     {
-        return super.toString()+ "  Agil: "+ agilidad+ "  Formental: " +fortalezaMental + 
-                "           "+ "Valoracion: " + valoracion();
+        return super.toString()+ "\t"+  "  Agil: "+ agilidad+  "\t" + "Formental: " +fortalezaMental + 
+                "\t"+ "\t"+ "\t"+  "Valoracion: " + valoracion()+ "\t";
     }
 }
