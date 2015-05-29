@@ -34,12 +34,19 @@ public class Equipo
         componentes.get(0).setDorsal(valorDorsal);
         valorDorsal++;
         //creacion de los jugadores 
-        for(int a = 1; a < jugadores;a++)
+        for(int a = 1; a < jugadores - 1;a++)
         {
              componentes.add(new JugadorCampo(nombres[rn.nextInt(33)]));
              componentes.get(a).setDorsal(valorDorsal);
              valorDorsal++;
         }
+        
+        if (rn.nextInt(1) == 0) {  //  Si sale 0 hay crack, si no no.
+            JugadorCampo crack = new JugadorCampo(nombres[rn.nextInt(nombres.length - 1)]);
+            crack.setPase(10);
+            crack.setRegate(10);
+            crack.setRemate(10);
+        }        
         
         //seleccion suplentes
         int nuemroSuplentes=jugadores-11;

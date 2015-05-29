@@ -35,6 +35,10 @@ public class JugadorCampo extends Jugador
         return pase;
     }
     
+    public void setPase(int pase) {
+        this.pase = pase;
+    }
+    
     /**
      * devuelve la regate
      * @return int regate
@@ -44,6 +48,10 @@ public class JugadorCampo extends Jugador
         return regate;
     }
     
+    public void setRegate(int regate) {
+        this.regate = regate;
+    }
+    
     /**
      * devuelve la remate
      * @return int remate
@@ -51,6 +59,10 @@ public class JugadorCampo extends Jugador
     public int getRemate()
     {
         return remate;
+    }
+    
+    public void setRemate(int remate) {
+        this.remate = remate;
     }
     
     /**
