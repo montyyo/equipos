@@ -14,10 +14,10 @@ public class Equipo
     private ArrayList<Jugador> suplentes;
     private int valorDorsal=1;
     String nombres[] = {"Ramon", "Pedro", "Juan", "Mario", "Marcos", "Miguel", "Luis", "Carlos", 
-       "Jose Ramon", "Federico", "Alberto", "Roberto", "Ruben", "Guillermo", "Hector", 
-           "Mario", "Felipe", "Manuel", "Tomas", "Agustin", "Jose Manuel", "Juan Jesus", 
-       "Pepe", "Ricardo", "Fernando", "Antonio", "Jose Alberto", "Jose Luis", "David", 
-       "Emilio", "Cesar", "German", "Raul", "Pablo"};
+            "Jose Ramon", "Federico", "Alberto", "Roberto", "Ruben", "Guillermo", "Hector", 
+            "Mario", "Felipe", "Manuel", "Tomas", "Agustin", "Jose Manuel", "Juan Jesus", 
+            "Pepe", "Ricardo", "Fernando", "Antonio", "Jose Alberto", "Jose Luis", "David", 
+            "Emilio", "Cesar", "German", "Raul", "Pablo"};
 
     /**
      * Constructor de equipos
@@ -36,28 +36,26 @@ public class Equipo
         //creacion de los jugadores 
         for(int a = 1; a < jugadores - 1;a++)
         {
-             componentes.add(new JugadorCampo(nombres[rn.nextInt(33)]));
-             componentes.get(a).setDorsal(valorDorsal);
-             valorDorsal++;
+            componentes.add(new JugadorCampo(nombres[rn.nextInt(33)]));
+            componentes.get(a).setDorsal(valorDorsal);
+            valorDorsal++;
         }
-        
-        if (rn.nextInt(1) == 0) {  //  Si sale 0 hay crack, si no no.
+
+        if (rn.nextInt(1) == 0) {  //  Si sale 0 hay crack, si no no.            
             JugadorCampo crack = new JugadorCampo(nombres[rn.nextInt(nombres.length - 1)]);
+            crack.setFormaFisica(10);
             crack.setPase(10);
             crack.setRegate(10);
-            crack.setRemate(10);
+            crack.setRemate(10);            
         }        
-        
+
         //seleccion suplentes
         int nuemroSuplentes=jugadores-11;
         for(int i=0;i<nuemroSuplentes;i++)
         {
             suplentes.add(componentes.remove(rn.nextInt(componentes.size()-1)));
-            
-        
-        
+
         }
-        
         //eleccion del capitan
         int capitan = rn.nextInt(10)+1;
         int dorsalc=componentes.get(capitan).getDorsal();
@@ -70,7 +68,7 @@ public class Equipo
     {
         return nombre;
     }
-    
+
     public void listaTitulares()
     {
         for(Jugador titular:componentes)
@@ -78,15 +76,15 @@ public class Equipo
             System.out.println(titular.toString());
         }
     }
-    
+
     public void listaSuplentes()
     {
-      for(Jugador titular:suplentes)
+        for(Jugador titular:suplentes)
         {
             System.out.println(titular.toString());
         }
     }
-    
+
     public float mediaValoracion()
     {
         int valEquipo=0;
@@ -94,7 +92,20 @@ public class Equipo
         {
             valEquipo+= titular.valoracion();
         }
-        
         return valEquipo/11;
+    }
+
+    public void entrenarEquipo() {
+        Jugador jugador = null;
+        for (int i = 0; i < componentes.size(); i++) {
+            jugador = componentes.get(i);
+            if (jugador instanceof Capitan) {
+                ((Capitan)jugador).entrenar();
+            } else if (jugador instanceof JugadorCampo) {                
+                ((JugadorCampo)jugador).entrenar();            
+            } else {
+                ((Portero)jugador).entrenar();
+            }
+        }
     }
 }

@@ -12,7 +12,6 @@ public class JugadorCampo extends Jugador
     private int remate;
     private static int MIN_ESTAT=0;
     private static int MAX_STAT=10;
-   
 
     /**
      * Constructor for objects of class Portero
@@ -25,7 +24,7 @@ public class JugadorCampo extends Jugador
         regate=rn.nextInt((MAX_STAT + 1) - MIN_ESTAT ) + MIN_ESTAT;
         remate=rn.nextInt((MAX_STAT + 1) - MIN_ESTAT ) + MIN_ESTAT;
     }
-    
+
     /**
      * devuelve la pase
      * @return int pase
@@ -34,11 +33,15 @@ public class JugadorCampo extends Jugador
     {
         return pase;
     }
-    
+
     public void setPase(int pase) {
-        this.pase = pase;
+        if (pase >= MAX_STAT) {
+            this.pase = MAX_STAT;
+        } else {
+            this.pase = pase;
+        }      
     }
-    
+
     /**
      * devuelve la regate
      * @return int regate
@@ -47,11 +50,15 @@ public class JugadorCampo extends Jugador
     {
         return regate;
     }
-    
+
     public void setRegate(int regate) {
-        this.regate = regate;
+        if (regate >= MAX_STAT) {
+            this.regate = MAX_STAT;
+        } else {
+            this.regate = regate;
+        }      
     }
-    
+
     /**
      * devuelve la remate
      * @return int remate
@@ -60,11 +67,15 @@ public class JugadorCampo extends Jugador
     {
         return remate;
     }
-    
-    public void setRemate(int remate) {
-        this.remate = remate;
-    }
-    
+
+    public void setRemate(int remate) {        
+        if (remate >= MAX_STAT) {
+            this.remate = MAX_STAT;
+        } else {
+            this.remate = remate;
+        }      
+    }    
+
     /**
      * devuelve la valoracion de cada jugador
      * @return int valoracion del jugador
@@ -73,7 +84,15 @@ public class JugadorCampo extends Jugador
     {
         return (regate+remate+pase+super.getForma() )/4;
     }
-    
+
+    public void entrenar() {
+        super.entrenar();
+        Random rnd = new Random();        
+        setPase((rnd.nextInt((MAX_STAT + 1 ) - MIN_ESTAT) + MIN_ESTAT) + pase);
+        setRegate((rnd.nextInt((MAX_STAT + 1 ) - MIN_ESTAT) + MIN_ESTAT) + regate);
+        setRemate((rnd.nextInt((MAX_STAT + 1 ) - MIN_ESTAT) + MIN_ESTAT) + remate);
+    }
+
     /**
      * datos del portero
      * @return string datos del portero
@@ -81,6 +100,6 @@ public class JugadorCampo extends Jugador
     public String toString()
     {
         return super.toString()+ "\t"+"  Pase: "+ pase+ "\t"+ "  Regate : " +regate + "\t" +
-                " Remate:  "+ "\t"+ "Valoracion: " + valoracion();
+        " Remate:  "+ "\t"+ "Valoracion: " + valoracion();
     }
 }

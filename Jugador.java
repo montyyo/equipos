@@ -61,6 +61,14 @@ public abstract class Jugador
         return formaFisica;
     }
     
+    public void setFormaFisica(int formaFisica){
+        if (formaFisica >= MAX_FORMA) {
+            this.formaFisica = MAX_FORMA;
+        } else {
+            this.formaFisica = formaFisica;
+        }        
+    }
+    
     /**
      * devuelve el dorsal del jugador
      * @return int numero del dorsal
@@ -88,6 +96,11 @@ public abstract class Jugador
      * valoracion del jugador
      */
     public abstract int valoracion();
+    
+    public void entrenar() {
+        Random rnd = new Random();
+        setFormaFisica((rnd.nextInt((MAX_FORMA + 1 ) - MIN_FORMA) + MIN_FORMA) + formaFisica);
+    }
     
     /**
      * devuelve los datos del jugador

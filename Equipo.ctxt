@@ -10,4 +10,6 @@ comment3.params=
 comment3.target=void\ listaSuplentes()
 comment4.params=
 comment4.target=float\ mediaValoracion()
-numComments=5
+comment5.params=
+comment5.target=void\ entrenarEquipo()
+numComments=6
