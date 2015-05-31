@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=numEquipos
+comment0.target=Liga(int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Liga\r\n
+comment1.params=
+comment1.target=void\ mostrarEquipos()
+comment2.params=
+comment2.target=void\ mostrarEncuentros()
+numComments=3

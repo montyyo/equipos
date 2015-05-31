@@ -99,7 +99,7 @@ public class JugadorCampo extends Jugador
      */
     public String toString()
     {
-        return super.toString()+ "\t"+"  Pase: "+ pase+ "\t"+ "  Regate : " +regate + "\t" +
-        " Remate:  "+ "\t"+ "Valoracion: " + valoracion();
+        return super.toString()+ "\t"+"  Pase: "+ pase+ "\t"+ "  Regate : " + regate + "\t" +
+        " Remate:  " + remate + "\tValoracion: " + valoracion();
     }
 }

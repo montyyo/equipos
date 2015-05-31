@@ -57,7 +57,7 @@ public class Equipo
 
         }
         //eleccion del capitan
-        int capitan = rn.nextInt(10)+1;
+        int capitan = rn.nextInt(10);
         int dorsalc=componentes.get(capitan).getDorsal();
         String nomb=componentes.get(capitan).getNombre();
         componentes.set(capitan,new Capitan(nomb));
@@ -68,7 +68,7 @@ public class Equipo
     {
         return nombre;
     }
-
+    
     public void listaTitulares()
     {
         for(Jugador titular:componentes)
